@@ -72,3 +72,6 @@ Route::get('/inserir',function(){
     
     $a->projeto()->save($p);       
 });
+Auth::routes(['register' => false]);
+
+Route::get('/home', 'HomeController@index')->name('home');

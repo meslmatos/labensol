@@ -1,10 +1,13 @@
-<!DOCTYPE HTML>
+@extends('layouts.app')
+
+@section('content')
+{{-- <!DOCTYPE HTML> --}}
 <!--
 	Epilogue by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-<html>
+{{-- <html>
 	<head>
 		<title>Labensol</title>
 		<meta charset="utf-8" />
@@ -12,12 +15,12 @@
 		<link rel="stylesheet" href="{{asset('css/app.css')}}" />
 		<link href="{{asset('css/main.css')}}" rel="stylesheet">
 	</head>
-	<body>
+	<body> --}}
 
 		<!-- Header -->
 			<header id="header" class="alt">
 				<div class="inner">
-					<h1>Laboratório de Energia Solar</h1>
+					<h1>Laboratório Instrumentação e Energia Solar</h1>
 					{{-- <a href="#"><img src="css/imagens/foto1.jpg" alt="" width="60" height="40"></a> --}}
 					
 					
@@ -125,5 +128,6 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-	</body>
-</html>
+	{{-- </body>
+</html> --}}
+@endsection

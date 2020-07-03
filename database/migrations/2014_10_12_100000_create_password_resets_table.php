@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEspectrosTable extends Migration
+class CreatePasswordResetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateEspectrosTable extends Migration
      */
     public function up()
     {
-        Schema::create('espectros', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('valor_aquisição');
-            $table->string('detector');
-            $table->string('voltagem');
-            $table->timestamps();
+        Schema::create('password_resets', function (Blueprint $table) {
+            $table->string('email')->index();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -29,6 +27,6 @@ class CreateEspectrosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('espectros');
+        Schema::dropIfExists('password_resets');
     }
 }
